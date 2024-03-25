@@ -19,10 +19,11 @@ const ingredients = [
 
 const list = document.querySelector("#ingredients");
 
-const listItems = ingredients.map((ingredient) => {
+const fragment = document.createDocumentFragment();
+for (const ingredient of ingredients) {
   const elem = document.createElement("li");
   elem.innerText = ingredient;
   elem.classList.add("item");
-});
-
-console.log(listItems);
+  fragment.appendChild(elem);
+}
+list.appendChild(fragment);

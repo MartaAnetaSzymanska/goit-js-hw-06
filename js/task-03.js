@@ -22,6 +22,6 @@ const galleryItems = images
   )
   .join("");
 
-gallery.insertAdjacentHTML("beforeend", galleryItems);
+gallery.innerHTML = galleryItems;
 
 console.log(gallery);

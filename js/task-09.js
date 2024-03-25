@@ -12,4 +12,3 @@ btn.addEventListener("click", () => {
   body.style.backgroundColor = getRandomHexColor();
   span.innerHTML = getRandomHexColor();
 });
-console.log(getRandomHexColor);

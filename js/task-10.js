@@ -8,6 +8,8 @@ const createBtn = document.querySelector("[data-create");
 const destroyBtn = document.querySelector("[data-destroy]");
 const parentBox = document.querySelector("#boxes");
 let amount = 0;
+let boxWidth = 20;
+let boxHeight = 20;
 
 input.addEventListener("change", setAmount);
 
@@ -16,8 +18,6 @@ function setAmount(event) {
 }
 
 function createBoxes() {
-  let boxWidth = 20;
-  let boxHeight = 20;
   for (let i = 0; i < amount; i++) {
     const elem = document.createElement("div");
     boxWidth += 10;
@@ -31,6 +31,8 @@ function createBoxes() {
 
 function destroyBoxes() {
   parentBox.innerHTML = "";
+  boxWidth = 20;
+  boxHeight = 20;
 }
 
 createBtn.addEventListener("click", createBoxes);
